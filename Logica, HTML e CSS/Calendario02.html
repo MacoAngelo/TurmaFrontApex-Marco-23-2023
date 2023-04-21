@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calendário</title>
+
+    <style>
+        .calendario-form{
+            height: 500px;
+            width: 500px;
+            background-color: whitesmoke;
+        }
+
+        .calendario-title {
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        .month {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .year {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .calendario-header {
+            clear: both;
+            margin-left: 7px;
+        }
+
+        .calendario-header-item {
+            float: left;
+            width: 12.5%;
+            margin: 0.78125%;
+
+            background-color: cadetblue;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .sunday {
+            background-color: rgb(239, 80, 80);
+        }
+
+        .float-terminator {
+        clear: both;
+        }
+
+        .calendario-body {
+            clear: both;
+            background-color: white;
+            margin: 2% 6px;
+            width: 97%;
+            height: 70%;
+
+            border-color: gray;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+
+        .calendario-linha {
+            height: 19.5%;
+            width: 100%;
+            border-bottom: 2px gray solid;
+        }
+
+        .calendario-item {
+            height: 100%;
+            width: 13.957%;
+
+            font-size: 47px;
+            display: table;
+            text-align: center;
+
+            float: left;
+            border-right: 2px gray solid;
+        }
+        
+        .item-values {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .ultimaLinha {
+            border-bottom: none;
+        }
+
+        .ultima-coluna {
+            border-right: none;
+        }
+
+        .weekend{
+            color: red;
+        }
+
+        .holiday {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendario-form">
+        <div class="calendario-title">
+            <h2 class="month">Abril</h2>
+            <h2 class="year">2023</h2>
+        </div>
+        <div class="calendario-header">
+            <div class="calendario-header-item sunday">
+                <span class="item-value">Domingo</span>
+            </div>
+            <div class="calendario-header-item">
+                <span class="item-value">Segunda</span>
+            </div>
+            <div class="calendario-header-item">
+                <span class="item-value">Terça</span>
+            </div>
+            <div class="calendario-header-item">
+                <span class="item-value">Quarta</span>
+            </div>
+            <div class="calendario-header-item">
+                <span class="item-value">Quinta</span>
+            </div>
+            <div class="calendario-header-item">
+                <span class="item-value">Sexta</span>
+            </div>
+            <div class="calendario-header-item ultima-coluna">
+                <span class="item-value">Sábado</span>
+            </div>
+            <div class="float-terminator"></div>
+        </div>
+        <div class="calendario-body">
+            <div class="calendario-linha">
+                <div class="calendario-item">
+                    <img style="width: 50px; height: 50px; vertical-align: middle;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Moon_symbol_decrescent.svg/2048px-Moon_symbol_decrescent.svg.png">
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values"></span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values"></span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values"></span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values"></span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values"></span>
+                </div>
+                <div class="calendario-item ultima-coluna">
+                    <span class="item-values">01</span>
+                </div>
+
+                <div class="float-terminator"></div>
+            </div>
+            <div class="calendario-linha">
+                <div class="calendario-item weekend">
+                    <span class="item-values">02</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">03</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">04</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">05</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">06</span>
+                </div>
+                <div class="calendario-item holiday">
+                    <span class="item-values">07</span>
+                </div>
+                <div class="calendario-item ultima-coluna">
+                    <span class="item-values">08</span>
+                </div>
+
+                <div class="float-terminator"></div>
+            </div>
+            <div class="calendario-linha">
+                <div class="calendario-item">
+                    <span class="item-values">09</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">10</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">11</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">12</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">13</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">14</span>
+                </div>
+                <div class="calendario-item ultima-coluna">
+                    <span class="item-values">15</span>
+                </div>
+
+                <div class="float-terminator"></div>
+            </div>
+            <div class="calendario-linha">
+                <div class="calendario-item">
+                    <span class="item-values">16</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">17</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">18</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">19</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">20</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">21</span>
+                </div>
+                <div class="calendario-item ultima-coluna">
+                    <span class="item-values">22</span>
+                </div>
+
+                <div class="float-terminator"></div>
+            </div>
+            <div class="calendario-linha ultimaLinha">
+                <div class="calendario-item">
+                    <span class="item-values">23</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">24</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">25</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">26</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">27</span>
+                </div>
+                <div class="calendario-item">
+                    <span class="item-values">28</span>
+                </div>
+                <div class="calendario-item ultima-coluna">
+                    <span class="item-values">29</span>
+                </div>
+
+                <div class="float-terminator"></div>
+            </div>
+        </div>
+        <div class="calendario-footer">
+
+        </div>
+    </div>
+</body>
+</html>

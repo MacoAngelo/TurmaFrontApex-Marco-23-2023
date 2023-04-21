@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 02</title>
+
+    <script>
+        function ExercicioA() {
+            let tipo = "C";
+            let valor = 10;
+
+            switch (tipo) {
+                case "C":
+                    document.write("Valor: F°" + ((valor * 1.8) + 32));
+                    break;
+                case "F":
+                    document.write("Valor: C°" + ((valor - 32) / 1.8));
+                    break;
+                default:
+                    document.write("Essa conversão não existe!");
+            }
+        }
+
+        function ExercicioB() {
+            const Valor_Dolar = 5.25;
+            const Valor_Euro = 5.65;
+
+            let tipo = "R->E";
+            let valor = 100;
+
+            switch (tipo) {
+                case "R->D":
+                    document.write("O resultado é " + (valor / Valor_Dolar));
+                    break;
+                case "D->R":
+                    document.write("O resultado é " + (valor * Valor_Dolar));
+                    break;
+                case "R->E":
+                    document.write("O resultado é " + (valor / Valor_Euro));
+                    break;
+                case "E->R":
+                    document.write("O resultado é " + (valor * Valor_Euro));
+                    break;
+                default:
+                    document.write("Essa conversão não existe!");
+                    break;
+            }
+        }
+
+        function ExercicioC() {
+            let produto = "Camisa";
+            let segmento = "vestuário";
+            let valor = 100;
+
+            switch (segmento) {
+                case "vestuário":
+                    document.write("O valor é R$ " + (valor * 0.95));
+                    break;
+                case "eletrônico":
+                    document.write("O valor é R$ " + (valor * 0.92));
+                    break;
+                case "alimentício":
+                    document.write("O valor é R$ " + (valor * 0.90));
+                    break;
+            }
+        }
+
+        function ExercicioD() {
+            let voto = prompt("Insira seu voto: \nAlessandra\nCaio\nGeraldo\nSair");
+            
+            let countCandidato01 = 0;
+            let countCandidato02 = 0;
+            let countCandidato03 = 0;
+
+            while (voto != "Sair") {
+                switch (voto) {
+                    case "Alessandra":
+                        countCandidato01++;
+                        break;
+                    case "Caio":
+                        countCandidato02++;
+                        break;
+                    case "Geraldo":
+                        countCandidato03++;
+                        break;
+                }
+
+                voto = prompt("Insira seu voto: \nAlessandra\nCaio\nGeraldo\nSair");
+            }
+
+            document.write(`Votação terminada!<br>Alessandra: ${countCandidato01}<br>Caio: ${countCandidato02}<br>Geraldo: ${countCandidato03}`);
+        }
+
+        function ExercicioE() {
+
+        }
+        
+        ExercicioD();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

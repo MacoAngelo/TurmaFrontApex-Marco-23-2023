@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro formulário</title>
+
+    <script>
+
+        // Função que vai ser chamada no onClick do botão
+        function acao() {
+
+           // Puxar valores dos elementos HTML 
+            let nota1 = parseInt(document.getElementById("nota1").value);
+            let nota2 = parseInt(document.getElementById("nota2").value);
+
+            // Obter a média
+            let media = calculo(nota1, nota2);
+
+            // Obter situação
+            let situacao = verificarSituacao(media);
+
+            // Mensagem
+            alert("Aluno está " + situacao + " com média " + media);
+        }
+
+        function calculo(parametroNota1, parametroNota2) {
+            return (parametroNota1 + parametroNota2) / 2;
+        }
+
+        function verificarSituacao(parametroMedia) {
+            // Operador ternário
+            return parametroMedia >= 7 ? "aprovado" : (parametroMedia > 5 ? "em recuperação" : "reprovado");
+        }
+    </script>
+</head>
+<body>
+    <!-- Formulário -->
+    <form>
+        <input type="text" placeholder="Primeira nota" id="nota1">
+        <input type="text" placeholder="Segunda nota" id="nota2">
+        <!-- <select id="operacao">
+            <option value="+" label="Soma"></option>
+            <option value="-" label="Subtracao"></option>
+            <option value="*" label="Multiplicação"></option>
+            <option value="/" label="Divisão"></option>
+        </select> -->
+        <input type="button" value="Verificar" onclick="acao()">
+    </form>
+</body>
+</html>

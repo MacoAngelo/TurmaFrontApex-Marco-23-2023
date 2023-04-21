@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script>
+        function ExercicioA() {
+
+        }
+        function ExercicioB() {
+
+        }
+        function ExercicioC() {
+            let matriz = [
+                ["", "", "", ""],
+                ["", "", "", ""],
+                ["", "", "", ""],
+                ["", "", "", ""]
+            ];
+
+            for (let linha = 0; linha < matriz.length; linha++) {
+                for (let coluna = 0; coluna < matriz[linha].length; coluna++) {
+                    matriz[linha][coluna] = Number(prompt("Informe um número!"));
+                }
+            }
+
+            let soma = 0;
+            let qtd = 0;
+
+            for (let linha = 0; linha < matriz.length; linha++) {
+                for (let coluna = 0; coluna < matriz[linha].length; coluna++) {
+                    qtd++;
+                    soma += matriz[linha][coluna];
+                    document.write(matriz[linha][coluna] + " | ");
+                }
+                document.write("<br>");
+            }
+
+            document.write("Soma: " + soma + "<br>");
+            document.write("Média: " + (soma / qtd));
+        }
+
+        function ExercicioD() {
+            let contatos = [];
+            let entrada = prompt(
+                "Menu inicial" +
+                "\n1 - Cadastro de contato" +
+                "\n2 - Listar contatos" +
+                "\n3 - Alterar contato" +
+                "\n4 - Remover contato" +
+                "\n5 - Sair do sistema"
+            );
+
+            while (entrada != "5") {
+                switch (entrada) {
+                    case "1":
+                        let nome = prompt("Informe o nome do contato");
+                        let email = prompt("Informe o email do contato");
+                        contatos.push([nome, email]);
+
+                        alert("Contato adicionado");
+                        break;
+                    case "2":
+                        let listagem = '';
+
+                        listagem += 'Lista de contatos';
+                        for (let contato = 0; contato < contatos.length; contato++) {
+                            listagem += '\nCodigo: ' + contato +
+                                '\nNome: ' + contatos[contato][0] +
+                                '\nEmail: ' + contatos[contato][1] + '\n';
+                        }
+
+                        alert(listagem);
+                        break;
+                    case "3":
+                        let codigoContatoAlterar = prompt("Informe o código do usuário que deve ser alterado");
+                        let novoEmail = prompt("Informe o novo email do contato");
+
+                        contatos[codigoContatoAlterar][1] = novoEmail;
+                        break;
+                    case "4":
+                        let codigoContatoRemover = prompt("Informe o código do usuário que deve ser removido");
+                        contatos.splice(codigoContatoRemover, 1);
+                        break;
+                    default:
+                        alert("Opção inválida!");
+                        break;
+                }
+
+                entrada = prompt(
+                    "Menu inicial" +
+                    "\n1 - Cadastro de contato" +
+                    "\n2 - Listar contatos" +
+                    "\n3 - Alterar contato" +
+                    "\n4 - Remover contato" +
+                    "\n5 - Sair do sistema"
+                );
+            }
+
+            document.write("Programa finalizado. Aperte F5 para executar novamente!");
+        }
+        function ExercicioE() {
+            let produtos = [
+                ["Mamão", 2],
+                ["Arroz 1kg", 10],
+                ["Caqui", 7.80],
+                ["Desinfetante", 9],
+                ["Banana", 1.50],
+                ["Abacate", 3.50]
+            ];
+
+            let entrada = Number(prompt(
+                "Informe o código do produto comprado!" +
+                "\n1 - Mamão" +
+                "\n2 - Arroz 1kg" +
+                "\n3 - Caqui" +
+                "\n4 - Desinfetante" +
+                "\n5 - Banana" +
+                "\n6 - Abacate" + 
+                "\n0 - Sair"
+            )) - 1;
+
+            let produtosComprados = [];
+            while (entrada > -1) {
+                let qtd = prompt("Informe a quantidade comprada");
+
+                let registroCompra = [
+                    entrada,
+                     qtd,
+                     produtos[entrada][1],
+                     produtos[entrada][1] * qtd
+                    ];
+
+                produtosComprados.push(registroCompra);
+                entrada = Number(prompt(
+                    "Informe o código do produto comprado!" +
+                    "\n1 - Mamão" +
+                    "\n2 - Arroz 1kg" +
+                    "\n3 - Caqui" +
+                    "\n4 - Desinfetante" +
+                    "\n5 - Banana" +
+                    "\n6 - Abacate" + 
+                    "\n0 - Sair"
+                )) - 1;
+            }
+
+            let totalCompra = 0;
+            document.write("Registro da compra <br><br>");
+            for (let i = 0; i < produtosComprados.length; i++) {
+                document.write(
+                    "Produto: " + produtos[produtosComprados[i][0]][0]+ "<br>"+
+                    "Quantidade: " + produtosComprados[i][1]+ "<br>" +
+                    "Valor unitário: " + produtosComprados[i][2]+ "<br>" +
+                    "Subtotal: " + produtosComprados[i][3] + "<br><br>"
+                    );
+
+                    totalCompra += produtosComprados[i][3];
+            }
+
+            document.write("Total da compra: R$ " + totalCompra);
+        }
+
+        ExercicioE();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

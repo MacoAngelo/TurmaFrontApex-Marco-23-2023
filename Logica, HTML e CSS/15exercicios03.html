@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <script>
+        function ExercicioA() {
+            var entrada = prompt("Informe o número que você deseja a tabuada.");
+
+            for (let i = 1; i < 11; i++) {
+                document.write(`${i} x ${entrada} = ${(i * entrada)} <br>`);
+            }
+        }
+        function ExercicioB() {
+            let inicial = prompt("Valor inicial");
+            let final = prompt("Valor final");
+
+            let contadorImpar = 0;
+            let contadorPar = 0;
+
+            for (let i = inicial; i <= final; i++) {
+                if (i % 2 == 0) {
+                    contadorPar++;
+                } else {
+                    contadorImpar++;
+                }
+            }
+
+            document.write("Quantidade de números pares: " + contadorPar + "<br>");
+            document.write("Quantidade de números impar: " + contadorImpar)
+        }
+        function ExercicioC() {
+            let voto = prompt("Insira seu voto: \n1 - Alessandra\n2 - Caio\n3 - Geraldo\n4 - Talita \n5 para sair");
+
+            let countCandidato01 = 0;
+            let countCandidato02 = 0;
+            let countCandidato03 = 0;
+            let countCandidato04 = 0;
+
+            while (voto != 5) {
+                switch (voto) {
+                    case "1":
+                        countCandidato01++;
+                        break;
+                    case "2":
+                        countCandidato02++;
+                        break;
+                    case "3":
+                        countCandidato03++;
+                        break;
+                    case "4":
+                        countCandidato04++;
+                        break;
+                    default:
+
+                        break;
+                }
+
+                voto = prompt("Insira seu voto: \n1 - Alessandra\n2 - Caio\n3 - Geraldo\n4 - Talita \n5 para sair");
+            }
+
+            document.write(`Votação terminada!<br>Alessandra: ${countCandidato01}<br>Caio: ${countCandidato02}<br>Geraldo: ${countCandidato03}<br>Talita: ${countCandidato04}`);
+        }
+
+        function ExercicioD() {
+            for (let i = 5; i >= 1; i--) {
+
+                // Forma 1
+                for(let contador = i; contador > 0; contador--) {
+                    document.write(" " + contador)
+                }
+                document.write("<br>");
+                
+                // Forma 2
+                let contador = i;
+                while(contador > 0) {
+                    document.write(" " + contador);
+                    contador--;
+                }
+
+                document.write("<br>");
+            }
+        }
+        ExercicioD();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

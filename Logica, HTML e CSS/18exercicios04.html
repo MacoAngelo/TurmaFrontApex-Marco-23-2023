@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 04</title>
+
+    <script>
+        function ExercicioA() {
+            let cidades = ["Blumenau", "São Paulo", "Rio de Janeiro", "Gaspar", "Timbó"];
+            for (let i = 0; i < cidades.length; i++) {
+                document.write(cidades[i] + "<br>");
+            }
+        }
+
+        function ExercicioB() {
+            let numeros = [];
+
+            for (let i = 5; i > 0; i--) {
+                // A função Number converte o valor para um dado do tipo númerico.
+                numeros.push(Number(prompt("Informe um número")));
+            }
+
+            let soma = 0;
+            document.write("Números selecionados: <br>");
+
+            for (let i = 0; i < numeros.length; i++) {
+                document.write(numeros[i] + "<br>");
+                soma += numeros[i];
+            }
+            document.write("Soma dos números adicionados: " + soma);
+        }
+        function ExercicioC() {
+            var nomes = [];
+            var nomeInformado = '';
+            var quantidade = 0;
+
+            nomeInformado = prompt("Informe um nome ou 'Sair' para encerrar.");
+            while (nomeInformado != 'Sair') {
+                nomes.push(nomeInformado);
+                quantidade++;
+
+                nomeInformado = prompt("Informe um nome ou 'Sair' para encerrar.");
+            }
+
+            for (let i = 0; i < nomes.length; i++) {
+                document.write(nomes[i] + "<br>");
+            }
+            document.write("Foram adicionados " + quantidade + " nomes.");
+        }
+        function ExercicioD() {
+            let numeros = [];
+
+            for (let i = 5; i > 0; i--) {
+                // A função Number converte o valor para um dado do tipo númerico.
+                numeros.push(Number(prompt("Informe um número")));
+            }
+
+            for (let i = numeros.length - 1; i >= 0; i--) {
+                document.write(numeros[i] + "<br>");
+            }
+        }
+        function ExercicioE() {
+            let numeros = [];
+            let qtdNumenoDez = 0;
+
+            for (let i = 0; i < 5; i++) {
+                numeros.push(prompt("Digite um número"));
+                if (numeros[i] == 10) {
+                    qtdNumenoDez++;
+                }
+            }
+
+            document.write("Foram informados " + qtdNumenoDez + " números 10!");
+        }
+        function ExercicioF() {
+            let numeros = [];
+            let somaValores = 0;
+            let mediaValores = 0;
+            let valoresMaiorOuIgualMedia = 0
+
+            for (let i = 0; i < 7; i++) {
+                numeros.push(Number(prompt("Digite um número")));
+                somaValores += numeros[i]
+            }
+
+            mediaValores = somaValores / numeros.length;
+
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros[i] >= mediaValores) {
+                    valoresMaiorOuIgualMedia++;
+                }
+            }
+
+            document.write("Soma: " + somaValores + "<br>");
+            document.write("Média: " + mediaValores + "<br>");
+            document.write("Valores maiores ou igual à média: " + valoresMaiorOuIgualMedia + "<br>");
+        }
+        function ExercicioG() {
+
+        }
+        function ExercicioH() {
+            let numeros = [];
+            for (let i = 5; i > 0; i--) {
+                numeros.push(Number(prompt("Informe um número!")));
+            }
+
+            var maiorNumero = Number.MIN_VALUE;
+            var menorNumero = Number.MAX_VALUE;
+            document.write("Números informados: <br>");
+            for (let i = 0; i < numeros.length; i++) {
+                let numero = numeros[i];
+
+                if (numero < menorNumero) {
+                    menorNumero = numero;
+                }
+
+                if (numero > maiorNumero) {
+                    maiorNumero = numero;
+                }
+
+                document.write(numero + "<br>");
+            }
+            document.write("Maior número: " + maiorNumero + "<br>");
+            document.write("Menor número: " + menorNumero + "<br>");
+        }
+        function ExercicioI() {
+            let cursos = [];
+
+            let entrada = prompt(
+                "Informe uma opção: " +
+                "\n1 - Cadastrar curso" +
+                "\n2 - Selecionar cursos" +
+                "\n3 - Remover curso" +
+                "\n4 - Sair do sistema"
+            );
+
+            while (entrada != "4") {
+                switch (entrada) {
+                    case "1":
+                        cursos.push(prompt("Informe o nome do curso."));
+                        break;
+                    case "2":
+                        var lista = '';
+                        for (let i = 0; i < cursos.length; i++) {
+                            lista += i + " - " + cursos[i] + "\n";
+                        }
+                        alert(lista);
+                        break;
+                    case "3":
+                        // Por código
+                        // let codigoRemover = prompt("Informe o  código do curso");
+                        // cursos.splice(codigoRemover, 1);
+                        //
+                        
+                        // Por nome
+                        let nomeRemover = prompt("Informe o  nome do curso")
+                        let indexCurso = cursos.indexOf(nomeRemover);
+                        if (indexCurso > 0) {
+                            cursos.splice(indexCurso, 1);
+                        }
+                        //
+                        break;
+                    default:
+                        document.write("Opção inválida!");
+                        break;
+                }
+
+                entrada = prompt(
+                "Informe uma opção: " +
+                "\n1 - Cadastrar curso" +
+                "\n2 - Selecionar cursos" +
+                "\n3 - Remover curso" +
+                "\n4 - Sair do sistema"
+            );
+            }
+
+            document.write("Programa encerrado!");
+        }
+        ExercicioI();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Condicionais Aninhadas</title>
+
+    <script>
+        // PROFESSOR
+        // ------------------------------------
+        const Idade_Corte_Adulto = 18;
+        const Idade_Corte_Adolecente = 13;
+
+        let idade = 24;
+
+        // "Errado"
+        if (idade >= Idade_Corte_Adulto) {
+            // Adulto
+        } else {
+            if (idade < Idade_Corte_Adolescente) {
+                // Criança
+            } else {
+                // Adolecente
+            }
+        }
+
+        // "Certo"
+        if (idade >= Idade_Corte_Adulto) {
+            // Adulto
+        } else if (idade < Idade_Corte_Adolescente) {
+            // Criança
+        } else {
+            // Adolescente
+        }
+
+        // ------------------------------------
+
+        // APOSTILA
+        // ------------------------------------
+
+        // Variável contendo uma linguagem de programação
+        let linguagem = "Python";
+
+        // Condicional
+        if (linguagem == "Java") {
+            document.write("Linguagem multiplataforma da Oracle");
+        } else if (linguagem == "C#") {
+            document.write("Linguagem desenvolvida pela Microsoft");
+        } else if (linguagem == "Python") {
+            document.write("Linguagem ideal para ciência de dados");
+        } else if (linguagem == "PHP") {
+            document.write("Linguagem de desenvolvimento WEB");
+        } else {
+            document.write("Ops! Tente novamente");
+        }
+
+        // ------------------------------------
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

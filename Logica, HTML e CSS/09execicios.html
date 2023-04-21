@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+
+    <script>
+        function exercicioA() {
+            let nota1 = 4;
+            let nota2 = 4;
+
+            let media = (nota1 + nota2) / 2;
+
+            if (media >= 7) {
+                document.write("Aprovado");
+            } else {
+                document.write("Reprovado");
+            }
+        }
+
+        function exercicioB() {
+            let valor1 = 2;
+            let valor2 = 5;
+
+            if (valor1 == valor2) {
+                document.write(valor1 + valor2)
+            } else {
+                document.write(valor1 * valor2)
+            }
+        }
+
+        function exercicioC() {
+            const Cod_Pizza = 1;
+            const Cod_Pao = 2;
+            const Cod_Macarrao = 3;
+
+            const Val_Pizza = 12;
+            const Val_Pao = 4;
+            const Val_Macarrao = 16;
+
+            let produtoEntrada = 2;
+            let valorEntrada = 12;
+
+            let valorComparacao = 0;
+            if (produtoEntrada == Cod_Pizza) {
+                valorComparacao = Val_Pizza;
+            } else if (produtoEntrada == Cod_Pao) {
+                valorComparacao = Val_Pao;
+            } else if (produtoEntrada == Cod_Macarrao) {
+                valorComparacao = Val_Macarrao;
+            } else {
+                document.write("Produto inválido");
+            }
+
+            if (valorEntrada < valorComparacao) {
+                document.write("Valor insuficiente!");
+            } else {
+                document.write("O seu troco deu R$ " + (valorEntrada - valorComparacao));
+            }
+        }
+
+        function exercicioD() {
+            let valor1 = -200;
+            let valor2 = -50;
+            let valor3 = -8;
+
+            if (valor1 < valor2) {
+                if (valor1 < valor3) {
+                    document.write("O menor valor é " + valor1);
+                } else {
+                    document.write("O menor valor é " + valor3);
+                }
+            } else {
+                if (valor2 < valor3) {
+                    document.write("O menor valor é " + valor2);
+                } else {
+                    document.write("O menor valor é " + valor3);
+                }
+            }
+        }
+
+        function exercicioE() {
+            let lado1 = 10;
+            let lado2 = 10;
+            let lado3 = 10;
+
+            if (lado1 == lado2 && lado1 == lado3) {
+                document.write("Equilatero");
+            } else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3) {
+                document.write("Escaleno");
+            } else {
+                document.write("Isóceles");
+            }
+        }
+
+        // Para executar;
+        exercicioD();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
