@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Grid de produtos</title>
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+  <h1>Grid de produtos</h1>
+  <table id="product-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Marca</th>
+        <th>Valor</th>
+        <th>Quantidade em estoque</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Os dados dos produtos serão preenchidos aqui com JavaScript -->
+    </tbody>
+  </table>
+  
+  <button id="add-product-button" class="add-button">Adicionar produto</button>
+
+  <div id="add-product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Produto</h2>
+      <form id="add-product-form">
+        <input type="hidden" id="product-id" name="product-id">
+        <label for="product-nome">Nome:</label>
+        <input type="text" id="product-nome" name="product-nome" required>
+        <label for="product-marca">Marca:</label>
+        <input type="text" id="product-marca" name="product-marca" required>
+        <label for="product-valor">Valor:</label>
+        <input type="number" id="product-valor" name="product-valor" step="0.01" required>
+        <label for="product-quantidadeEstoque">Quantidade em estoque:</label>
+        <input type="number" id="product-quantidadeEstoque" name="product-quantidadeEstoque" step="0.01" required>
+        <button type="submit" class="add-button">Salvar</button>
+      </form>
+    </div>
+  </div>  
+  
+  <script src="js/produtos.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+</html>
