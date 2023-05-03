@@ -14,12 +14,12 @@ function updateTable() {
         let product = produtosCadastrados[i];
 
         // Crie as células da linha
-        let linha = table.insertRow(i + 1);
-        let nomeCell = linha.insertCell(0);
-        let marcaCell = linha.insertCell(1);
-        let valorCell = linha.insertCell(2);
-        let quantidadeEstoqueCell = linha.insertCell(3);
-        let actionsCell = linha.insertCell(4);
+        let linha = table.insertRow(i + 1); //<tr>
+        let nomeCell = linha.insertCell(0); //<td>
+        let marcaCell = linha.insertCell(1);//<td>
+        let valorCell = linha.insertCell(2);//<td>
+        let quantidadeEstoqueCell = linha.insertCell(3);//<td>
+        let actionsCell = linha.insertCell(4);//<td>
 
         // Preencha as células com os dados do produto
         nomeCell.textContent = product.nome;
@@ -30,6 +30,10 @@ function updateTable() {
         <button class="edit-button" data-index="${i}">Editar</button>
         <button class="remove-button" data-index="${i}">Remover</button>
       `;
+      // A informação ou atributo data- é utilizada para identificar informações do registro.
+      // Por exemplo: data-index informa o indice do registro que está sendo alterado.
+      // Isso é utilizado em ambientes de desenvolvimento para facilitar a análise por parte dos programados.
+      // Assim facilitando situações onde seria necessária uma análise para indetifica-la.
 
         // Adicione um evento de clique no botão de remover
         let removeButton = actionsCell.querySelector(".remove-button");

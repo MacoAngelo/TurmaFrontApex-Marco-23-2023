@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <title>Controle de contatos</title>
+</head>
+<body>
+    <div id="add-product-modal" class="modal">
+        <div class="modal-content">
+          <!-- &times; => Caracter X-->
+          <span class="close-button">&times;</span>
+          <h2>Produto</h2>
+          <form id="add-product-form">
+            <input type="hidden" id="contato-id" name="contato-id">
+            <label for="contato-nome">Nome:</label>
+            <input type="text" id="contato-nome" name="contato-nome" required>
+            <label for="contato-email">Email:</label>
+            <input type="text" id="contato-email" name="contato-email" required>
+            <label for="contato-idade">Idade:</label>
+            <input type="number" id="contato-idade" name="contato-idade" required>
+            <label for="contato-cidade">Cidade:</label>
+            <input type="text" id="contato-cidade" name="contato-cidade" required>
+            <button type="button" class="add-button" onclick="salvarRegistro()">Salvar</button>
+          </form>
+        </div>
+      </div>  
+    <script src="js/contatos.js"></script>
+</body>
+</html>
