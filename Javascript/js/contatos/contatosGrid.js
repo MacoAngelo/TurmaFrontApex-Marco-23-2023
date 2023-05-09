@@ -9,7 +9,38 @@ function atualizarTabela() {
     for(let index = 0; index < contatosCadastrados.length; index++) {
         let contato = contatosCadastrados[index];
 
-        table.insertRow(index + 1);
+        let linha = table.insertRow(index + 1); // => <tr>
+
+        let nomeCell = linha.insertCell(0); // => <td>
+        let emailCell = linha.insertCell(1); // => <td>
+        let idadeCell = linha.insertCell(2); // => <td>
+        let cidadeCell = linha.insertCell(3); // => <td>
+        let acoesCell = linha.insertCell(4); // => <td>
+
+        // Preenchendo o valor das células.
+        nomeCell.textContent = contato.nome;
+        emailCell.textContent = contato.email;
+        idadeCell.textContent = contato.idade;
+        cidadeCell.textContent = contato.cidade;
+
+        // Criando botões
+        acoesCell.innerHTML = `
+        <button class="edit-button" data-index="${index}">Editar</button>
+        <button class="remove-button" data-index="${index}">Remover</button>`;
+
+        // Implementando botões
+        let botaoApagar = acoesCell.querySelector(".remove-button");
+        botaoApagar.addEventListener('click', () => {
+            contatosCadastrados.splice(index, 1);
+            atualizarTabela();
+        })
+
+        let botaoEditar = acoesCell.querySelector(".edit-button");
+        botaoEditar.addEventListener('click', () => {
+            let contato = new Contato();
+            contato.load(index);
+            contato.abrirModal();
+        })
     }
 }
 

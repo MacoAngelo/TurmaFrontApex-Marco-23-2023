@@ -1,4 +1,6 @@
 let form = document.getElementById('contatos-form');
+let modal = document.getElementById('modal');
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -32,10 +34,19 @@ form.addEventListener('submit', (event) => {
     // Limpar o formulário
     indexInput.value = "";
     form.reset();
+
+    modal.style.display = 'none';
+    atualizarTabela()
 });
 
 let closeButton = document.getElementById('modal-close-button');
 closeButton.addEventListener('click', () => {
+    // Limpa campos visíveis do formulário.
+    form.reset();
+
+    let indexInput = document.getElementById('contato-index');
+    indexInput.value = "";
+
     let modal = document.getElementById('modal');
     modal.style.display = 'none';
 })
