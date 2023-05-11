@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/contatos/contatos.css">
+    <link rel="stylesheet" href="css/contatos/contatosGrid.css">
+    <link rel="stylesheet" href="css/contatos/contatosModel.css">
+</head>
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close-button" class="close-button">&times;</span>
+            <h2>Contatos</h2>
+            <form id="contatos-form">
+                <input id="contato-index" type="hidden">
+    
+                <label for="contato-nome">Nome</label>
+                <input id="contato-nome" type="text" required>
+    
+                <label for="contato-email">Email</label>
+                <input id="contato-email" type="text" required>
+    
+                <label for="contato-idade">Idade</label>
+                <input id="contato-idade" type="number" required>
+    
+                <label for="contato-cidade">Cidade</label>
+                <input id="contato-cidade" type="text" required>
+    
+                <button class="save-button" type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
