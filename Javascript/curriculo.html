@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Tela Dividida ao Meio</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .planoFundo {
+      display: flex;
+      height: 100%;
+    }
+
+    .yellow-bg {
+        width: 100px;
+      /* flex-grow: 1;*/
+      background-color: yellow; 
+    }
+
+    .blue-bg {
+        width: 100px;
+      /* flex-grow: 1;*/
+      background-color: blue; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container planoFundo">
+    <div class="yellow-bg col-sm-6">
+    </div>
+    <div class="blue-bg col-sm-6">
+    </div>
+  </div>
+</body>
+</html>
