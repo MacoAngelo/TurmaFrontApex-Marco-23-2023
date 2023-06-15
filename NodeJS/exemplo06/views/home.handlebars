@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-body mb-4">
+    <a class="navbar-brand nav-content" href="#">Lista de Postagens</a>
+    <div class="navbar-right nav-content">
+        <a href="/cad" class="btn btn-primary">Novo</a>
+    </div>
+</nav>
+
+<div class="container">
+    {{#each posts}}
+    <div class="card mb-2">
+        <div class="card-body">
+            <h5 class="card-title">{{dataValues.titulo}}</h5>
+            <p class="card-text">{{dataValues.conteudo}}</p>
+            <a href="/deletar/{{dataValues.id}}" class="btn btn-danger">Excluir</a>
+            <a href="/editar/{{dataValues.id}}" class="btn btn-primary">Editar</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
