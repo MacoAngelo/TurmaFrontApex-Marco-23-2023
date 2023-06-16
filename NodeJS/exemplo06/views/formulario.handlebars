@@ -1,13 +1,18 @@
 <div class="container">
     <h1>Formulário de Postagem</h1>
-    <form action="/add" method="POST">
+    {{#unless postagem}}
+        <h3>Criando registro</h3>
+        {{else}}
+        <h3>Editando registro</h3>
+    {{/unless}}
+    <form action="{{#unless id}}/add{{else}}/update/{{id}}{{/unless}}" method="POST">
       <div class="form-group mb-2">
         <label for="titulo">Título</label>
-        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o título">
+        <input type="text" class="form-control" id="titulo" name="titulo" value="{{#if id}}{{titulo}}{{/if}}" placeholder="Digite o título">
       </div>
       <div class="form-group mb-4">
         <label for="conteudo">Descrição</label>
-        <textarea class="form-control" id="conteudo" name="conteudo" rows="3" placeholder="Digite a descrição"></textarea>
+        <textarea class="form-control" id="conteudo" name="conteudo" rows="3" placeholder="Digite a descrição">{{#if id}}{{conteudo}}{{/if}}</textarea>
       </div>
       <button type="submit" class="btn btn-primary">Salvar</button>
       <a href="/" class="btn btn-secondary">Voltar</a>
