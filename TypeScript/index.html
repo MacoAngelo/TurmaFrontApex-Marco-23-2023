@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TypeScript</title>
+
+    <script src="helloWorld.js"></script>
+    <script src="Carro.js"></script>
+
+    <script>
+        // Uma instância da classe Carro
+        c = new Carro();
+        c.fabricante = "Hyundai";
+        c.modelo = "HB20";
+        c.cor = "Azul";
+        c.ano = 2019;
+        c.tetoSolar = true;
+        c.exibirDados();
+        // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+        d = new Carro();
+        d.fabricante = "Renault";
+        d.modelo = "Sandero";
+        d.cor = "Prata";
+        d.ano = 2011;
+        d.tetoSolar = false;
+        d.exibirDados();
+
+    </script>
+</head>
+<body>
+    <p>Página para testar o TypeScript</p>
+
+    <button onclick="mensagem()">Mensagem</button>
+</body>
+</html>
