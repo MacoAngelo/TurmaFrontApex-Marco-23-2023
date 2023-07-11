@@ -1,7 +1,6 @@
 // class -> Classe (Palavra reservada utilizada para cria-la)
-class Carro {
+class Carro extends Veiculo {
     // Atributos da nossa classe
-    fabricante:string;
     modelo:string;
     cor: string;
     ano: number;
@@ -16,7 +15,7 @@ class Carro {
         mensagem += `\n\tCor: ${this.cor}`;
         mensagem += `\n\tAno: ${this.ano}`;
         mensagem += `\n\tTeto Solar: ${this.tetoSolar}`;
-
+        
         alert(mensagem);
     }
     // =-=-=-=-=-=-=-=-=-=-=-=-=
